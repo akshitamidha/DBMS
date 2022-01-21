@@ -1,0 +1,22 @@
+\documentclass{article}
+
+\usepackage[english]{babel}
+
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+\title{Application of Database Management System in Patient Monitoring System}
+\author{Akshita Midha}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Data collected under the healthcare department is under excessive amount leading to difficulty amongst the managers. Using a pre-defined database system to store the recorded data collectively for easy access of the managers, consumers, doctors, patients, and even records.
+The complex Database system simplifies all difficult tasks of data access and management for the organization. Accessing the beneficial side of the DBMS we can manage and simplify a major part of the problem faced. Thus, in the discussion that follows, we will understand the necessity and accessibility of all the data recorded through the Patient Monitoring System precisely and through this discussion we will attempt to reach to a proper conclusion for the same.
+\end{abstract}
+
+\section{Introduction}
+
+
+
+\end{document}
