@@ -1,0 +1,134 @@
+\documentclass[10pt,a4paper,twoside]{article}
+\usepackage[dutch]{babel}
+%laad de pakketten nodig om wiskunde weer te geven :
+\usepackage{amsmath,amssymb,amsfonts,textcomp}
+%laad de pakketten voor figuren :
+\usepackage{graphicx}
+\usepackage{float,flafter}
+\usepackage{hyperref}
+\usepackage{inputenc}
+%zet de bladspiegel :
+\setlength\paperwidth{20.999cm}\setlength\paperheight{29.699cm}\setlength\voffset{-1in}\setlength\hoffset{-1in}\setlength\topmargin{1.499cm}\setlength\headheight{12pt}\setlength\headsep{0cm}\setlength\footskip{1.131cm}\setlength\textheight{25cm}\setlength\oddsidemargin{2.499cm}\setlength\textwidth{15.999cm}
+
+\begin{document}
+\begin{center}
+\hrule
+
+\vspace{.4cm}
+{\bf {\Huge Application of Database Management System in Patient Monitoring System}}
+\vspace{.2cm}
+\end{center}
+{\bf Akshita Midha}  (19111005)  \\
+\hrule
+
+
+
+\section{Abstract}
+Through this paper we will study how the complex data compilation of a patient using a patient monitoring system can be automated and made easily accessible to the care taker, thus making the healthcare system for treatments, diagnosis and therapy easier. It also focuses on the importance of proper data collection and data analysis of the collected data in order to properly execute the studied and analysed information for the benefit of the patient. With complete study of these concepts we can easily pin point the importance of data management in the healthcare sector as it is one of those areas of continuous growth which acquires heavy data frequently.
+
+\section{Introduction}
+Data collected under the healthcare department is under excessive amount leading to difficulty amongst the managers. Using a pre-defined database system to store the recorded data collectively for easy access of the managers, consumers, doctors, patients, and even records.
+The complex Database system simplifies all difficult tasks of data access and management for the organization. Accessing the beneficial side of the DBMS we can manage and simplify a major part of the problem faced. Thus, in the discussion that follows, we will understand the necessity and accessibility of all the data recorded through the Patient Monitoring System precisely and through this discussion we will attempt to reach to a proper conclusion for the same.
+
+\section{What is a Patient Monitoring System?}
+Continuous monitoring of patient parameters such as heart rate and rhythm, respiration rate, blood pressure, blood oxygen saturation, and a variety of other parameters has become a standard part of critical care. Electronic monitors are widely employed to collect and show physiological data when precise and timely decision-making is critical for effective patient care. Non-invasive sensors are increasingly being used to collect data from less seriously ill patients in hospital medical-surgical units, labour and delivery suites, nursing homes, and patients' homes in order to detect unexpected life-threatening conditions or efficiently record routine but required data.
+
+A patient monitor is typically thought of as something that watches for—and warns against—serious or life-threatening events in severely ill or otherwise vulnerable individuals. Patient monitoring is "repeated or continuous observations or measurements of the patient, his or her physiological function, and the function of life support equipment for the purpose of guiding management decisions, including when to make therapeutic interventions, and assessment of those interventions," according to a strict definition. Not only can a patient monitor warn caregivers to potentially life-threatening occurrences, but it can also offer physiologic input data that can be utilised to regulate directly connected life support devices.
+
+Most clinical data used to be in the form of heart and respiratory rates, blood pressures, and flows, but now they also comprise combining data from bedside instruments that measure blood gases, chemistry, and haematology, as well as integrating data from a variety of outside sources (ICU). Although we typically work with patients in intensive care units, the same ideas and approaches apply to all hospitalised patients.
+Patient monitoring, for example, may be used in the emergency room for diagnostic purposes or in the operating room for therapeutic purposes. Techniques that were exclusively used in the ICU a few years ago are now routinely utilised on normal hospital units and, in certain cases, by patients at home.
+
+\subsection{Patient Monitoring System in Intensive Care Units}
+Patients that require physiological monitoring fall into at least five categories:
+1. Patients with erratic physiological regulatory systems, such as those whose respiratory systems have been inhibited due to a medication overdose or anaesthesia.
+2. Patients with a suspected life-threatening condition, such as a patient with symptoms of an acute myocardial infarction (heart attack)
+3. Patients at high risk of developing a life-threatening condition, such as those recovering from open-heart surgery or premature infants with underdeveloped hearts and lungs.
+4. Patients who are in a critical physiological state, such as those who have had multiple trauma or are in septic shock.
+5. During the labour and delivery process, the mother and the infant.
+
+The care of critically ill patients necessitates quick and correct judgments so that life-saving and life-prolonging therapy may be administered appropriately. ICUs have grown in popularity in hospitals as a result of these requirements. Computers are nearly universally used in such units to perform the following tasks:
+[1] To collect physiological data, such as blood pressure readings, on a regular or continuous basis.
+[2] To communicate data from data-producing systems to remote locations (e.g., laboratory and radiology departments).
+[3] To store, organise, and report data.
+[4] To communicate data from data-producing systems to remote locations (e.g., laboratory and radiology departments).
+[5] To integrate and correlate data from multiple sources.
+[6] To provide clinical alerts and advisories based on multiple sources of data.
+[7] To serve as a decision-making tool for health professionals in planning the care of critically ill patient, In order to classify patients, the severity of their sickness is measured.
+[8] To assess the clinical and financial effectiveness of intensive care unit (ICU) care.
+
+\subsection{Data Acquisition and Signal Processing}
+The acquisition, display, and processing of physiological data has been revolutionised because to the usage of microcomputers in bedside monitors. Almost no bedside monitors or ventilators on the market today do not contain at least one microcomputer. Sensors that transform biological data (such as pressure, flow, or mechanical movement) into electrical impulses produce physiological signals like the ECG. These impulses are digitised as close to the patient as feasible in current computerised monitors.
+
+Some biological signals, such as the currents that pass through the heart and are recorded as the ECG, are already in electrical form. The ECG voltage signal generated by the electrodes on the skin's surface is very small—only a few millivolts in amplitude. The patient is electrically disconnected from the bedside monitor, and the analogue ECG signal is amplified to a level that an analog-to-digital converter can convert to digital data (ADC). The outcomes of processing digital data can subsequently be displayed.
+
+The sampling rate is a crucial factor in determining how well an analogue signal corresponds to its digital representation. The ECG's digitised form appears to be an analogue recording of the ECG. The shape of the P wave (atrial depolarization), the amplitude of the QRS complex (ventricular depolarization), and the shape of the T wave (ventricular recovery) are all correctly replicated aspects of the ECG.
+The amplitude and structure of the QRS complex begin to be altered when the sampling rate is reduced to 100 samples per second. The QRS complex is substantially distorted when just 50 observations per second are recorded, and the other properties begin to distort as well. Gross signal distortion occurs with a recording rate of only 25 observations per second, and even calculating heart rate by counting intervals from R to R is difficult.
+
+\section{System Architecture}
+WANDA is built on a three-tier architecture. The first layer is a sensor tier that collects and sends data from patients' health-related metrics to the web server tier. The second tier is made up of web servers that accept data from the first and keep it safe. The back-end database server, which performs data backup and recovery, is the third layer. Data from the third layer is also used in data analysis projects including linear regression, missing data imputation, signal search, early adaptive warning, and clinical data security.
+
+\subsection{Tier 1: Sensor tier}
+Wireless sensors and mobile devices make up the first tier. Sensors in this layer keep track of patients and send information to web servers. WANDA's first version is aimed at older CHF patients who aren't used to using smartphones or PCs. As a result, WANDA only employs gadgets that look and work like ordinary weight scales and blood pressure monitors and link to a standard phone line. The second iteration of WANDA collects and transmits data using a smartphone. Patients can also access their own health data via a smartphone interface using this mobile version. The graphical user interface in the second iteration gives detailed instructions with visuals to make the device simple to use for patients.
+In order to monitor CHF patients, the first version's sensor tier uses Bluetooth-based weight scales, blood pressure monitors, WHI [21] Personal Activity Monitors (PAMs), mobile phones, and an SMS message server system. As previously stated, most patients using this system are uncomfortable with computers or cellphones, so WANDA communicates with the second tier in real time via a phone line system. PAMs (Personal Activity Monitors) are used to track patient movements and are sent to users via mail. Every two weeks, the PAMs' data is uploaded to the databases.
+In order to construct a mobile version of WANDA, the second version of WANDA uses a different set of health monitoring devices than the first version. In comparison to the previous system, the second version not only contains all of the functions of the original system, but it also provides developers more customizability. Bluetooth-based weight scales, blood pressure monitors, Android-based activity monitors, fall detection monitors, and symptom questionnaire applications are used in the sensor tier. All of the devices function as masters in the Bluetooth device-smartphone interface, initiating Bluetooth communication with an Android phone. Bluetooth has a range of about 10 metres and allows for secure data transmissions. Wi-Fi or 3G networks are used to communicate between the phone and the medical server. Within 5 seconds, data from a sensing device is uploaded to an Android phone. The Android phone saves data on a local SD card and sends data to a networked server.
+
+\subsubsection{Survey System}
+The survey system unit (NIDA) is used to collect basic user information at the start of the WANDA investigation. This technology is also utilised on a regular basis to monitor the user's health.
+
+\subsubsection{Weight Scale}
+The Ideal Life system is included in the first tier of WANDA's first version. Body Manager body weight scale and BP Manager blood pressure monitor equipment are included. Weight data is collected by the Body Manager system and sent to the Ideal Life Pod. The components can communicate in a range of up to 300–400 feet thanks to the system's Bluetooth support.
+
+\subsubsection{Blood Pressure Monitor}
+In the first edition of WANDA, the Ideal Life BP Manager blood pressure monitor gadget measures diastolic blood pressure, systolic blood pressure, and heart rate. The BP Manager device takes blood pressure and heart rate data and transfers it via Bluetooth to the Ideal Life Pod.
+
+\subsubsection{Activity monitor}
+The WHI Personal Activity Monitor is used in the phone-line version of WANDA to track patients' everyday activities. The WHI Personal Activity Monitor is a triaxial acc recorder that is tiny and lightweight. Because of its tiny size, the WHI PAM can be readily carried in a patient's pocket. To guarantee that data resolution requirements are met while optimising for longer battery life, the sample rate and minimum acceleration threshold can be modified.
+An on-board flash memory card is used to store time-series acceleration data. On an internet-connected PC, data is sent via USB. The WHI PAM system determines daily calorie expenditure based on metabolic equivalents associated with approximations of the patient's activity levels throughout the day using a patient's age, gender, height, and weight.
+
+\subsubsection{Daily symptom questionnaire system}
+Patients are asked to complete a questionnaire via an SMS survey system or an Android-based application according to a doctor's timetable. The goal of the questionnaire is to assess for CHF symptoms. In the second tier, the WHI WANDA database collects and records the corresponding user answers.
+
+\subsubsection{Communication center}
+The components can communicate within a range of up to 10 metres because the phone line version system supports Bluetooth. When the Ideal Life Pod collects data from the weight scale and blood pressure sensors, it sends it to the database system over a regular phone line using a long-distance phone plan.
+
+\subsection{Tier 2: Web server tier}
+The information gathered by the first tier is delivered to numerous web servers, which store the information and provide monitoring apps as described in "Web and Mobile Applications." The phone line version, unlike the mobile version, pulls data from many web servers. Because the Ideal Life, PAM, and WHI SMS systems employ incompatible data types and databases, data analysis requires pulling data from many databases. An abstraction of file formats and a shared ID table are used to solve incompatible data formats in multiple databases. In addition, the server executes extra data processing in order to calculate specified variables from a variety of database sources. When the acquired values fall outside of the permitted range, the system sends alert messages to healthcare practitioners through text message or e-mail.
+
+\subsubsection{Abstraction of data formats}
+The goal of programming abstraction is to separate behaviour from implementation. By encapsulating the representation, we can modify the representation without having to change all applications, allowing us to change implementations without harming users. Other modules don't have to rely on the implementation specifics if an implementation is enclosed.
+Since the phone line version, a data abstraction process is necessary. WANDA obtains data from file systems that accept a variety of file formats, including CSV, XML, and text. For example, data stored in an Ideal Life file system should be processed and abstracted before being inserted into a SQL server. As a result, we created a PHP API to extract XML data from the file system and enter it into the WANDA SQL server.
+
+\subsubsection{Data integrity}
+For a variety of reasons, such as people migrating or changing healthcare providers, it is necessary to merge records from disparate systems or healthcare organisations. Linking information between repositories and analysis becomes a big challenge when the number of available repositories and studies grows. Finding the right resources and connecting their content to the results of the study are difficult tasks. Bell uses a massively distributed Master Patient Index to link electronic medical data together, making all patients' medical records available to care providers (MPI). An MPI is a facility that performs matching and correlates and refers patient identifiers.
+
+\subsubsection{Additional data processing}
+APIs were developed on the server side based on requests. The APIs process data by importing data from a variety of sources.
+The most current weight number from the database, for example, was retrieved in order to compute calorie expenditure. Using the METs and weight value with matching timestamps, the developed API estimated the calorie expenditure. On the second tier of the system, you may also calculate the duration of a specific METs value during a day.
+
+\subsubsection{Back-end database tier}
+Because the data in the WANDA system is so important and sensitive, any data loss must be actively avoided. If data is lacking, the system will be unable to appropriately assess the patient's condition and illustrate the system's effectiveness. As a result, WHI SOPHI designed a back-end server for data backup and recovery. WHI SOPHI is a database integration project at the UCLA WHI that stores and distributes websites, files, and data from all of the institute's programmes. Data backups are important for restoring a system's state after a disaster or for restoring a limited number of files that were mistakenly deleted or corrupted. Data in the third tier is used for clinical data security initiatives and data analysis (such as linear regression, missing data imputation, and early adaptive alarm).
+
+\subsubsection{Data backup and recovery}
+When there are no current updates, WANDA uses an offline backup method to backup data. The technology analyses the data entering times statistically and creates a backup and recovery strategy. All unfinished file backups are checked for completion before the new backup method is run when a database backup happens. To support transactional properties of data, coordinated backup and recovery, the DBMS connects with the SOPHI client application. The last modification timestamp, distributed database information, the unique ID of the last modified data, and other varied components are all kept in the data backup log file in the SOPHI client programme. The application uses WANDA APIs to communicate with the back-end server in order to allow coordinated backup and recovery with the DBMS.
+
+\subsection{Tier 3: Web and mobile applications}
+The web server tier is used by WANDA to deliver two different monitoring applications for healthcare providers. The first is a web application, and the second is a smartphone app. Patients' weight, blood pressure, heart rate, daily questions, and calorie consumption may all be checked via the web application or the smartphone app. Users do not need to be concerned about underlying file types, software architectures, or operating systems because application interfaces are simple, consistent, and communicative. Graphs or tables can be used to display data. The web application also displays the statistical results of SMS responses. The graph mode uses the length of the bar, spectrum of colours, and annotation to display the quantity of calories burned in an hourly-based format and other information in a daily-based format.In a discussion with caregivers who use the system, the structure of the website, data display modes, fonts, and graph colours were defined.
+
+To prevent unauthorised users from accessing the online application, user verification is required. The first page requests a user ID and password, which are given to participants in a private meeting. If necessary, healthcare providers can also use the WANDA website to add more patients and synchronise data.
+
+\section{Conclusion}
+A wireless health system provides real-time and computer-based analysis, which cuts down on the requirement for specialist visits. This remote real-time care avoids emergency circumstances and warns caregivers when patients want assistance.We introduced the Weight and Activity with Blood Pressure Monitoring System in this study.
+The architecture of WANDA is three-tiered. The first layer includes of sensors that measure and send data from patients' health-related metrics to the second tier. WANDA collects and transmits health-related data using a Bluetooth weight scale, blood pressure monitor, activity monitor, and questionnaire system. The second tier is made up of web servers that accept data from the first and keep it safe.
+To integrate WANDA data from multiple databases, an abstraction of file formats and a shared ID table are employed. The second tier also sends alert messages to healthcare practitioners through textmessage or e-mail when the collected values are outside of the allowed range. In WHI SOPHI, the third tier is a back-end database server that executes backup and recovery operations using an offline backup. The WHI SOPHI client application regulates data transport between distributed web databases and the DBMS using its backup log file and PHP APIs.
+
+\section{References}
+
+1.) https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3236812/pdf/nihms-321200.pdf
+
+2.) https://people.kth.se/~maguire/DEGREE-PROJECT-REPORTS/130718-Ruslan Mukha
+madov-with-cover.pdf
+
+
+
+
+\end{document}
